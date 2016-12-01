@@ -1,4 +1,4 @@
-(ns arachne-demo-1.ticktock
+(ns demo.ticktock
   (:require [com.stuartsierra.component :as c]
             [clojure.tools.logging :as log]))
 
@@ -8,7 +8,7 @@
     (log/info s)
     (swap! state #(case %, "tick" "tock", "tock" "tick", nil))
     (future
-      (Thread/sleep 1000)
+      (Thread/sleep 2500)
       (ticktock state))))
 
 (defrecord TickTock [state]
