@@ -16,7 +16,7 @@
 ;; reference on the 'ticktock' component
 (http/handler :demo/status-handler {:demo/ticktock :ticker} 'demo.web/status)
 
-;; Create the entitty for an Interceptor component
+;; Create the entity for an Interceptor component
 (core/component :demo/insulting-interceptor {} 'demo.web/insulter)
 
 ;; Define a Pedestal HTTP server
